@@ -206,7 +206,7 @@ def parse_arguments():
          "help": "input file or folder to translate"}),
         ("--openai_key", {"type": str,
          "default": "", "help": "OpenAI API key"}),
-        ("--model", {"type": str, "default": "gpt-4",
+        ("--model", {"type": str, "default": "gpt-3.5-turbo",
          "help": "Model to use for translation, e.g., 'gpt-3.5-turbo' or 'gpt-4'"}),
         ("--num_threads", {"type": int, "default": 10,
          "help": "number of threads to use for translation"}),
