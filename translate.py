@@ -58,7 +58,7 @@ def translate(key, target_language, text, use_azure=False, api_base="", deployme
         "role":
         "user",
         "content":
-        f"Translate the following text into {target_language}. 翻译风格参考一天世界的李如一老师，符合中文习惯. Return only the translation and nothing else:\n{text}",
+        f"翻译以下内容到 {target_language}. 翻译风格参考一天世界的李如一老师，符合中文习惯. 只返回翻译的结果:\n{text}",
     }]
     if use_azure:
         completion = openai.chat.completions.create(
