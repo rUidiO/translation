@@ -53,12 +53,12 @@ def translate(key, target_language, text, use_azure=False, api_base="", deployme
     # Set up the prompt
     messages = [{
         'role': 'system',
-        'content': 'You are a translator assistant.'
+        'content': '你是一个翻译家，正在翻译一本个人传记。'
     }, {
         "role":
         "user",
         "content":
-        f"翻译以下内容到 {target_language}. 翻译风格参考一天世界的李如一老师，符合中文习惯，遇到专有名词比如地名和人名，在翻译名词的后面后面显示它的原有名词，并且用方括号括起来，只返回翻译的结果:\n{text}",
+        f"翻译以下内容到 {target_language}. 翻译风格符合中文习惯，遇到地名或人名，在名称的后面后面显示它的原有名词，并且用方括号括起来，返回翻译的结果:\n{text}",
     }]
     if use_azure:
         completion = openai.chat.completions.create(
